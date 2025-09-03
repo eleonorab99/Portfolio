@@ -2,10 +2,17 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 //import App from './App.tsx'
-import Portfolio from './Portfolio.tsx'
-
+//import Portfolio from './Portfolio.tsx'
+/*
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Portfolio />
+  </StrictMode>,
+)*/
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <div style={{color: 'blue', fontSize: '24px'}}>
+      React funziona! 🎉
+    </div>
   </StrictMode>,
 )
