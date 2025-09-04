@@ -57,7 +57,7 @@ const HeroSection: React.FC = () => {
             showText ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
           }`}
         >
-          <h1 className="text-6xl lg:text-7xl xl:text-8xl font-thin mb-8 text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin mb-6 md:mb-8 text-white">
             Benvenuti.
           </h1>
           <div
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => {
               showText ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }`}
           >
-            <p className="text-lg lg:text-xl text-gray-300 max-w-2xl leading-relaxed font-light">
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-xl leading-relaxed font-light">
               Il mio nome è Eleonora Baroni, e sono una front-end developer junior a Roma. Ho una particolare predisposizione per
               il frontend ma riesco a programmare anche parte del backend. Sono motivata ad applicare le mie conoscenze
               tecniche in un ambiente professionale per creare interfacce utente intuitive e responsive.

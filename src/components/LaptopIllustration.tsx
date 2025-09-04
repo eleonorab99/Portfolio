@@ -12,16 +12,16 @@ const LaptopIllustration: React.FC = () => {
         isLoaded
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-10 scale-90"
-      }`}
+      } flex justify-center`}
     >
-      {/* Ombra sotto */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-56 w-96 h-10 bg-black opacity-20 rounded-full blur-2xl"></div>
+      {/* Ombra */}
+      <div className="absolute left-1/2 -translate-x-1/2 top-64 w-[60vw] max-w-[340px] h-10 bg-black opacity-30 rounded-full blur-2xl z-0"></div>
       {/* Corpo laptop */}
-      <div className="relative flex flex-col items-center">
+      <div className="relative flex flex-col items-center z-10 w-[90vw] max-w-[420px]">
         {/* Schermo */}
-        <div className="w-[420px] h-[260px] bg-gradient-to-br from-gray-700 to-gray-900 rounded-t-[1.5rem] shadow-2xl border-8 border-gray-800 relative z-10 flex items-center justify-center">
-          {/* --- Qui resta il tuo schermo interno, non toccare questa parte --- */}
-          <div className="absolute inset-4 bg-black rounded-lg overflow-hidden">
+        <div className="w-full h-[40vw] max-w-[420px] max-h-[260px] min-h-[180px] bg-[#e0e1dd] rounded-t-[2.5rem] shadow-2xl border-[10px] border-[#7c7c7c] relative z-10 flex items-center justify-center">
+          {/* --- Schermo interno, NON MODIFICARE --- */}
+          <div className="absolute inset-4 bg-gray-900 rounded-lg overflow-hidden">
             <div className="w-full h-full bg-black rounded-md relative overflow-hidden">
               <div className="bg-gray-800 h-6 flex items-center px-2 space-x-1">
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -57,35 +57,24 @@ const LaptopIllustration: React.FC = () => {
             </div>
           </div>
           {/* --- Fine schermo interno --- */}
-          {/* Cornice superiore - webcam */}
-          <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-500 rounded-full"></div>
+          {/* Cornice superiore */}
+          <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-10 h-2 bg-[#bfc0c0] rounded-full opacity-70"></div>
         </div>
         {/* Cerniera */}
-        <div className="w-[340px] h-4 bg-gray-800 rounded-b-2xl -mt-1 z-0 flex items-center justify-center">
-          <div className="w-16 h-1 bg-gray-600 rounded-full"></div>
-        </div>
+        <div className="w-[40vw] max-w-[120px] h-4 bg-[#bfc0c0] rounded-b-xl -mt-1 z-0"></div>
         {/* Base laptop */}
-        <div className="w-[420px] h-[140px] bg-gray-400 rounded-b-[1.5rem] shadow-2xl border-t-4 border-gray-700 flex flex-col items-center relative z-0">
-          {/* Tastiera stilizzata */}
-          <div className="w-[340px] mx-auto mt-4 grid grid-cols-14 gap-1">
+        <div className="w-full h-[10vw] max-w-[460px] max-h-[70px] min-h-[120px] bg-gradient-to-b from-[#bfc0c0] to-[#495057] rounded-b-[1.5rem] shadow-2xl border-t-[8px] border-[#7c7c7c] flex flex-col items-center relative z-0">
+          {/* Tastiera realistica */}
+          <div className="w-[70%] mx-auto mt-2 grid grid-cols-14 gap-1">
             {Array.from({ length: 56 }).map((_, i) => (
               <div
                 key={i}
-                className="h-3 w-3 bg-gray-900 rounded-sm shadow-md"
-                style={{
-                  gridColumn: (i % 14) + 1,
-                  marginLeft: i % 14 === 0 ? "4px" : "0",
-                  border: "1px solid rgba(255,255,255,0.1)"
-                }}
+                className="h-3 w-3 bg-[#343a40] rounded-[3px] border border-[#868e96]"
               ></div>
             ))}
           </div>
           {/* Trackpad */}
-          <div className="w-24 h-6 bg-gray-600 rounded-md mx-auto mt-3 shadow-inner border border-gray-500">
-            <div className="w-full h-full flex justify-center items-center">
-              <div className="w-8 h-1 bg-gray-500 opacity-30 rounded-full"></div>
-            </div>
-          </div>
+          <div className="w-12 h-4 bg-[#adb5bd] rounded-lg mx-auto mt-2 shadow-inner border border-[#868e96]"></div>
         </div>
       </div>
     </div>
